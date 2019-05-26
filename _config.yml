@@ -1,0 +1,26 @@
+title: The Websites Guy
+email: info@thewebsitesguy.co.uk
+description: www.thewebsitesguy.co.uk webpage and blog
+# baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://github.com/proochster/thewebsitesguy"
+twitter_username: thewebsitesguy
+github_username:  proochster
+
+# Build settings
+markdown: kramdown
+# theme: minima
+plugins:
+  - jekyll-feed
+  
+highlighter: rouge
+
+sass:
+  sass_dir: ./_styles
+  style: compressed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - Gemfile
+  - Gemfile.lock

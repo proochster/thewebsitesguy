@@ -1,0 +1,57 @@
+/*------------------------------------*\
+    #UTILITIES
+\*------------------------------------*/
+
+.color{
+
+    &--primary{
+        color: $primary-colour;
+    }
+
+    &--secondary{
+        color: $secondary-colour;
+    }
+
+    &--light{
+        color: $grey-light;
+    }
+
+    &--dark{
+        color: $dark;
+    }
+
+    &--accent{
+        color: $style-1-accent;
+    }
+}
+
+.bg{
+
+    &--light{
+        background-color: $light;
+    }
+}
+
+#sc{
+
+    [data-display="false"]{
+        display: none;
+    }
+
+    [data-display="true"]{
+        display: block;
+
+        @include screen-bigger-than($small){
+            display: flex;
+        }
+    }
+}
+
+.inline-list{
+    list-style: none;
+    padding: 0;
+
+    &__item{
+        display: inline-block;
+    }
+}

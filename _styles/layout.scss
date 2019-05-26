@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+
+html{
+    height: 100%;
+}
+
+body{
+    background-color: $grey-light;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.site{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.padding{
+    padding: $base-unit;
+}
+
+.wrapper{
+    padding: $base-unit;
+    // max-width: $site-width;
+    margin: 0 auto;
+    // width: 100%;
+    // box-sizing: border-box;
+}
+
+.content{
+    // background: linear-gradient(15deg, $grey-dark, $light);
+    flex-grow: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
