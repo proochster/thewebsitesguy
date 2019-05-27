@@ -4,23 +4,27 @@
 
 
 // Colours
-$primary-colour: #EB6300;
-$secondary-colour: #111c3a;
-$secondary-highlight: #192850;
-$grey-light: #E5E5E5;
-$grey-dark: #D8D8D8;
-$light: #FFF;
-$dark: #3C455B;
-// $link: #688BE3;
+$primary-colour: #8A81A1;
+$secondary-colour: #3B9A00;
 
-$style-1-primary: #dadada;
-$style-1-secondary: #bdbdbd;
-$style-1-accent: #42b596;
+$dark: #212A49;
+$light: #FFF;
+
+$grey-light: #F2F2F2;
+$grey-dark: #2B2B2B;
+
+$link: #0066FF;
+
+// $secondary-highlight: #192850;
+
+// $style-1-primary: #dadada;
+// $style-1-secondary: #bdbdbd;
+// $style-1-accent: #42b596;
 
 
 // Spacing
 $base-unit: 12px;
-$base-unitx2: $base-unit * 2;
+$double-unit: $base-unit * 2;
 $half-unit: $base-unit/2;
 
 $small: 767px;

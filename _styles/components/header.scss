@@ -3,10 +3,16 @@
 \*------------------------------------*/
 
 .header{
-    background-color: $light;
+    background-color: $dark;
 
     &__wrapper{
         display: flex;
         justify-content: space-between;
+    }
+
+    &__logo{
+        text-decoration: none;
+        color: $light;
+        font-size: 20px;
     }
 }

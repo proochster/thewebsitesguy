@@ -3,8 +3,8 @@
 \*------------------------------------*/
 
 body{
-    color: $secondary-colour;
-    font-family: 'Open Sans', sans-serif;
+    color: $grey-dark;
+    font-family: 'Quicksand', sans-serif;
     font-size: 14px;
 }
 
@@ -14,22 +14,22 @@ h1,h2,h3,h4,h5{
 }
 
 a{
-    color: $style-1-accent;
+    color: $link;
 
     &:hover{
         text-decoration: none;
     }
 }
 
-.page-title{
-    padding: 0 0 $base-unit;
-    margin: 0;
-}
+// .page-title{
+//     padding: 0 0 $base-unit;
+//     margin: 0;
+// }
 
-.font{
+// .font{
 
-    &--code{
-        // font-family: 'Source Code Pro', monospace;
-        font-family: 'Encode Sans Semi Expanded', sans-serif;
-    }
-}
+//     &--code{
+//         // font-family: 'Source Code Pro', monospace;
+//         font-family: 'Encode Sans Semi Expanded', sans-serif;
+//     }
+// }
