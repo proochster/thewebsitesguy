@@ -3,7 +3,16 @@
 \*------------------------------------*/
 
 html{
-    // height: 100%;
+    height: 100%;
+    background: url(/assets/background-767.min.jpg) bottom no-repeat $dark;
+    background-size: cover;
+    color: $light;
+    @include screen-bigger-than($small){
+        background-image: url(/assets/background-1024.min.jpg);
+    }
+    @include screen-bigger-than($medium){
+        background-image: url(/assets/background.min.jpg);
+    }
 }
 
 body{
@@ -16,9 +25,31 @@ body{
 }
 
 .site{
-    // height: 100%;
-    // display: flex;
-    // flex-direction: column;
+
+    &:before{
+        border-style: solid;
+        content: '';
+        position: absolute;
+        border-color: transparent transparent transparent #eb6300;
+        border-width: 0 0 60vw 100vw;
+        z-index: 0;
+        top: 0;
+        left: 0;
+
+        @include screen-bigger-than($small){
+            border-width: 0 0 30vw 60vw;
+        }
+    }
+}
+
+.top{
+    min-height: 80%;
+    min-height: 80vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
 }
 
 .padding{
@@ -26,7 +57,8 @@ body{
 }
 
 .wrapper{
-    padding: $base-unit $double-unit;
+    padding: 5%;
+    padding: 5vh;
     max-width: $site-width;
     margin: 0 auto;
     box-sizing: border-box;
@@ -34,19 +66,20 @@ body{
 }
 
 .content{
-    max-width: $site-width;
+    // max-width: $site-width;
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
-    position: relative;
-    top: -11vw;
+    // position: relative;
+    // top: -11vw;
 }
 
 .main{
-    background-color: $light;
-    padding: $base-unit $double-unit;
+    overflow-x: scroll;
+    // background-color: $light;
+    // padding: $base-unit $double-unit;
 
-    @include screen-bigger-than($medium){
-        width: 70%;
-    }
+    // @include screen-bigger-than($medium){
+    //     width: 70%;
+    // }
 }

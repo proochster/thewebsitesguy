@@ -3,18 +3,12 @@
 \*------------------------------------*/
 
 .intro{
-    background: url(/assets/intro-768.png) bottom no-repeat $primary-colour;
-    background-size: cover;
-    color: $light;
-    min-height: 30vh;
-    padding: 10vw 0 20vw;
 
-    @include screen-bigger-than($small){
-        background-image: url(/assets/intro.png);
-    }
+    // min-height: 30vh;
+    // padding: 10vw 0 20vw;
 
     &__title{
-        font-size: 24px;
+        font-size: 38px;
         font-weight: 300;
         // min-height: 100vh;
 

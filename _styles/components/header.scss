@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 .header{
-    background-color: $dark;
+    // background-color: $dark;
 
     &__wrapper{
         display: flex;
@@ -11,8 +11,7 @@
     }
 
     &__logo{
-        text-decoration: none;
-        color: $light;
-        font-size: 20px;
+        // text-decoration: none;
+        font-size: 18px;
     }
 }
