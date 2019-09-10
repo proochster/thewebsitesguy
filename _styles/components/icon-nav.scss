@@ -13,6 +13,8 @@
     }
 
     &__link{
-        padding: 0 $base-unit;
+        padding: 0 $half-unit;
+        display: block;
+        width: $double-unit;
     }
 }
