@@ -2,27 +2,22 @@
     #UTILITIES
 \*------------------------------------*/
 
-.color{
+// COLOURS
+.primary{
+    color: $primary;
+}
+.secondary{
+    color: $secondary;
+}
+.accent{
+    color: $accent;
+}
+.light{
+    color: $light;
+}
 
-    // &--primary{
-    //     color: $primary-colour;
-    // }
-
-    // &--secondary{
-    //     color: $secondary-colour;
-    // }
-
-    // &--light{
-    //     color: $grey-light;
-    // }
-
-    // &--dark{
-    //     color: $dark;
-    // }
-
-    // &--accent{
-    //     // color: $style-1-accent;
-    // }
+.uppercase{
+    text-transform: uppercase;
 }
 
 .bg{
@@ -30,6 +25,10 @@
     // &--light{
     //     background-color: $light;
     // }
+}
+
+.block{
+    display: block;
 }
 
 .inline-list{

@@ -4,7 +4,7 @@
 
 body{
     color: $light;
-    font: 300 16px 'Quicksand', sans-serif;
+    font: 300 16px 'Trebuchet MS', Arial, sans-serif;
 }
 
 h1,h2,h3,h4,h5{
@@ -22,6 +22,16 @@ a{
 
 strong{
     font-weight: 500;
+}
+
+.title{
+    &--1{
+        font-size: 24px;
+    }
+}
+
+.letter-space{
+    letter-spacing: 3px;
 }
 
 // .page-title{

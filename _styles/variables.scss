@@ -4,14 +4,16 @@
 
 
 // Colours
-$primary-colour: #8A81A1;
-$secondary-colour: #3B9A00;
+$primary: #054D76;
+$primary-light: #10608C;
+$secondary: #BBEBA4;
+$accent: #00A3FF;
 
 $dark: #212A49;
 $light: #FFF;
 
-$grey-light: #F2F2F2;
-$grey-dark: #2B2B2B;
+$grey-light: #E5E5E5;
+$grey-dark: #212A49;
 
 $link: #0066FF;
 
@@ -23,12 +25,12 @@ $link: #0066FF;
 
 
 // Spacing
-$base-unit: 12px;
-$double-unit: $base-unit * 2;
-$half-unit: $base-unit/2;
+$unit: 12px;
+$double-unit: $unit * 2;
+$half-unit: $unit/2;
 
 $small: 767px;
 $medium: 1024px;
-$large: 1200px;
+$large: 1400px;
 
 $site-width: $large;

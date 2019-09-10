@@ -4,82 +4,30 @@
 
 html{
     height: 100%;
-    background: url(/assets/background-767.min.jpg) bottom no-repeat $dark;
-    background-size: cover;
     color: $light;
-    @include screen-bigger-than($small){
-        background-image: url(/assets/background-1024.min.jpg);
-    }
-    @include screen-bigger-than($medium){
-        background-image: url(/assets/background.min.jpg);
-    }
 }
 
 body{
-    // background-color: $grey-light;
-    // display: flex;
-    // flex-direction: column;
-    // padding: 0;
     margin: 0;
-    // height: 100%;
-}
-
-.site{
-
-    &:before{
-        border-style: solid;
-        content: '';
-        position: absolute;
-        border-color: transparent transparent transparent #eb6300;
-        border-width: 0 0 60vw 100vw;
-        z-index: 0;
-        top: 0;
-        left: 0;
-
-        @include screen-bigger-than($small){
-            border-width: 0 0 30vw 60vw;
-        }
-    }
 }
 
 .top{
-    min-height: 80%;
-    min-height: 80vh;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
+    background-image: linear-gradient(to bottom, $primary-light, $primary);
 }
 
 .padding{
-    padding: $base-unit;
+    padding: $unit;
 }
 
 .wrapper{
-    padding: 5%;
-    padding: 5vh;
+    padding: $double-unit;
     max-width: $site-width;
     margin: 0 auto;
     box-sizing: border-box;
-    // width: 100%;
 }
 
 .content{
-    // max-width: $site-width;
-    margin: 0 auto;
-    width: 100%;
-    box-sizing: border-box;
-    // position: relative;
-    // top: -11vw;
 }
 
 .main{
-    overflow-x: scroll;
-    // background-color: $light;
-    // padding: $base-unit $double-unit;
-
-    // @include screen-bigger-than($medium){
-    //     width: 70%;
-    // }
 }

@@ -1,16 +1,18 @@
 ---
 ---
 {% include head.html %}
-<div class="top wrapper">
-    {% include header.html %}
-    {% include intro.html %}
+<div class="top">
+    <div class="wrapper">
+        {% include header.html %}
+        {% include intro.html %}
+    </div>
+</div>
+<div class="wrapper">
     <div class="content">
         <main class="main">
             {{ content }}
         </main>
     </div>
-</div>
-<div class="wrapper">
     {% include contact.html %}
 </div>
 {% include footer.html %}
