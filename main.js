@@ -1,9 +1,24 @@
-// (function(){
-//     var sc = {
-//         searchInput: document.querySelector('.search__input'),
-//         shortCodes: document.querySelectorAll('.sc'),
-//         searchCount: document.querySelector('.search__count'),
-//         searchWrapper: document.querySelector('.search__wrapper'),
+(function(){
+    var app = {
+        hints: document.querySelectorAll('[data-hint]'),
+
+        timing: function(){
+            var self = this;
+            setTimeout(function(){
+                var t = performance.timing;
+                var p = t.domInteractive - t.navigationStart;
+                var message = "Don't let your users wait for ever.";
+
+                if (p < 500){
+                    message = "It took only " + p + " miliseconds to load this site!";
+                } else if (p < 2000){
+                    message = "This site has loaded in " + (p/1000).toFixed(2) + " second!";
+                }
+
+                // Inject in DOM
+                self.hints.item(0).setAttribute('data-hint', message);
+            }, 0);
+        },
 
 //         // Returns true if the input text value matches the content
 //         hasPhrase: function(block, element, query){
@@ -90,12 +105,12 @@
 //             }
 //         },
 
-//         init: function(){
-//             this.search();
-//         }
-//     }
+        init: function(){
+            this.timing();
+        }
+    }
 
-//     if( sc.searchInput && sc.shortCodes ){
-//         return sc.init();
-//     }
-// })();
+    if( app.hints ){
+        return app.init();
+    }
+})(window);
