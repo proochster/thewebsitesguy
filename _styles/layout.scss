@@ -4,7 +4,6 @@
 
 html{
     height: 100%;
-    color: $light;
 }
 
 body{
@@ -15,8 +14,19 @@ body{
     background-image: linear-gradient(to bottom, $primary-light, $primary);
 }
 
-.padding{
+.p{
     padding: $unit;
+    &-b{
+       padding-bottom: $unit;
+    }
+    &-r{
+        &-d{
+            padding-right: $double-unit;
+        }
+    }
+    // &-t{
+    //     padding-top: $unit;
+    // }
 }
 
 .wrapper{
@@ -26,8 +36,39 @@ body{
     box-sizing: border-box;
 }
 
-.content{
+.m{
+    @include screen-bigger-than($small){
+        &-40{
+            width: 40%;
+        }
+        &-60{
+            width: 60%;
+        }
+
+        &-flex{
+            display: flex;
+            // flex-flow: wrap;
+
+            > * {
+                box-sizing: border-box;
+            }
+        }
+    }
 }
 
-.main{
+.l{
+    @include screen-bigger-than($large){
+        &-50{
+            width: 50%;
+        }
+
+        &-flex{
+            display: flex;
+            flex-flow: wrap;
+            
+            > * {
+                box-sizing: border-box;
+            }
+        }
+    }
 }

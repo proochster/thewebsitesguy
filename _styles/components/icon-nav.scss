@@ -13,8 +13,9 @@
     }
 
     &__link{
-        padding: 0 $half-unit;
+        padding: $half-unit;
         display: block;
-        width: $double-unit;
+        width: 18px;
+        margin-right: 36px;
     }
 }
