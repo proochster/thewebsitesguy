@@ -9,9 +9,7 @@
                 var p = t.domInteractive - t.navigationStart;
                 var message = "Don't let your users wait for ever.";
 
-                if (p < 500){
-                    message = "It took only " + p + " miliseconds to load this site!";
-                } else if (p < 2000){
+                if (p < 2000){
                     message = "This site has loaded in " + (p/1000).toFixed(2) + " second!";
                 }
 
