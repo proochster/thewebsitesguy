@@ -5,6 +5,7 @@ description: www.thewebsitesguy.co.uk webpage and blog
 url: "https://thewebsitesguy.co.uk"
 twitter_username: thewebsitesguy
 github_username:  proochster
+theme-colour: '#054D76'
 
 # Build settings
 markdown: kramdown

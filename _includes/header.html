@@ -1,6 +1,8 @@
 <header class="header">
     <div class="header__wrapper">
-        <div class="header__logo p-b light">{{ site.title }}</div>
+        <div class="header__logo">
+            <a href="{{ site.url }}" class="p-b light block" title="{{ site.title }}">{{ site.title }}</a>
+        </div>
         <ul class="icon-nav">
             <!-- <li class="icon-nav__item">
                 <a href="#" title="Send enquiry" class="icon-nav__link">{% include /svg/email.svg %}</a>
