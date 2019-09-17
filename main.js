@@ -15,8 +15,21 @@
             }, 0);
         },
 
+        loadHints: function(){
+            var self = this;
+
+            (function iterate(i) {   
+                setTimeout(function () {
+                    self.hints.item(i).setAttribute('data-loaded','true');  
+                    i++;
+                    if (i < self.hints.length) iterate(i);  
+                }, 200)
+             })(0);
+        },
+
         init: function(){
             this.timing();
+            this.loadHints();
         }
     }
 

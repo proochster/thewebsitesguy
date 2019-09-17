@@ -27,3 +27,15 @@
 .block{
     display: block;
 }
+
+[data-loaded]:after{
+    opacity: 0;
+    top: -20px;
+    transition: opacity .5s, top .5s;
+    position: relative;
+}
+
+[data-loaded="true"]:after{
+    opacity: 1;
+    top: 0;
+}
