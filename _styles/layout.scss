@@ -41,13 +41,16 @@ body{
         &-40{
             width: 40%;
         }
+        &-50{
+            width: 50%;
+        }
         &-60{
             width: 60%;
         }
 
         &-flex{
             display: flex;
-            // flex-flow: wrap;
+            flex-flow: wrap;
 
             > * {
                 box-sizing: border-box;
@@ -57,7 +60,10 @@ body{
 }
 
 .l{
-    @include screen-bigger-than($large){
+    @include screen-bigger-than($medium){
+        &-25{
+            width: 25%;
+        }
         &-50{
             width: 50%;
         }
