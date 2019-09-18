@@ -18,6 +18,7 @@
 
 [data-hint]{
     position: relative;
+    // clear: both;
 
     // &:before{
     //     @include screen-smaller-than($large){
@@ -46,12 +47,16 @@
        
         @include screen-bigger-than($small){
             padding: $unit $double-unit;
-            margin-right: $double-unit;
+            margin-top: $unit;
             background-color: $accent;
+            border-left: 5px solid $secondary;
             border-radius: 0 10px 10px 10px;
+            width: fit-content;
+            max-width: 50%;
+        }
+        @include screen-bigger-than($large){
             display: inline-block;
             border-radius: 10px 10px 10px 0;
-            // top: 0;
             position: absolute;
         }
     }
