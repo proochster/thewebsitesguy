@@ -34,15 +34,15 @@ strong{
     letter-spacing: 3px;
 }
 
-// .page-title{
-//     padding: 0 0 $base-unit;
-//     margin: 0;
-// }
-
-// .font{
-
-//     &--code{
-//         // font-family: 'Source Code Pro', monospace;
-//         font-family: 'Encode Sans Semi Expanded', sans-serif;
-//     }
-// }
+.wt{
+    &-b{
+        font-weight: bold;
+    }
+}
+.m\:wt{
+    @include screen-bigger-than($small){
+        &-l{
+            font-weight: lighter;
+        }
+    }
+}
