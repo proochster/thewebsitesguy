@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    #CONTACT
+\*------------------------------------*/
+
+.contact{
+    background-color: $secondary-light;
+}
+
+.input{
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid $grey-light;
+}
+
+.button{
+    width: 100%;
+    max-width: 50%;
+    background-color: $link;
+    color: $light;
+    border: none;
+    border-radius: 6px;
+}
