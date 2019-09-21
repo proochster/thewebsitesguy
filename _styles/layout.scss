@@ -16,6 +16,9 @@ body{
 
 .p{
     padding: $unit;
+    &-d{
+        padding: $double-unit;
+    }
     &-b{
        padding-bottom: $unit;
     }
