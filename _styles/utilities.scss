@@ -32,6 +32,27 @@
     display: block;
 }
 
+.sticky{
+    position: sticky;
+    top: 0;
+}
+
+.glow:target{
+    outline: 3px solid transparent;
+    animation-name: glow;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes glow {
+    // from {outline: 3px solid $link;}
+    // to {outline: 3px solid transparent;}
+    0%   {outline-color: transparent;}
+    25%  {outline-color: transparent;}
+    50%  {outline-color: $link;}
+    100%  {outline-color: transparent;}
+}
+
 [data-loaded]:after{
     opacity: 0;
     top: -20px;
