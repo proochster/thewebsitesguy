@@ -2,7 +2,7 @@
     #TYPOGRAPHY
 \*------------------------------------*/
 
-body{
+body, .body-font{
     color: $text;
     font: 300 16px 'Trebuchet MS', Arial, sans-serif;
 }
@@ -34,15 +34,15 @@ strong{
     letter-spacing: 3px;
 }
 
-.wt{
-    &-b{
-        font-weight: bold;
-    }
-}
-.m\:wt{
-    @include screen-bigger-than($small){
-        &-l{
-            font-weight: lighter;
-        }
-    }
-}
+// .wt{
+//     &-b{
+//         font-weight: bold;
+//     }
+// }
+// .m\:wt{
+//     @include screen-bigger-than($small){
+//         &-l{
+//             font-weight: lighter;
+//         }
+//     }
+// }
