@@ -64,3 +64,11 @@
     opacity: 1;
     top: 0;
 }
+
+[data-hidden="true"]{
+    display: none;
+}
+
+[data-hidden="false"]{
+    display: block;
+}
