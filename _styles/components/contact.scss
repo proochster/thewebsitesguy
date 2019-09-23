@@ -22,3 +22,15 @@
     border: none;
     border-radius: 6px;
 }
+
+.prompt{
+    border: 3px solid $light;
+    color: $dark;
+}
+
+.success{
+    background-color: $secondary;
+}
+.error{
+    background-color: $warning;
+}
