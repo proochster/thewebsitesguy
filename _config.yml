@@ -25,3 +25,8 @@ sass:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - .firebaserc
+  - database.rules.json
+  - firebase.json
+  - package.json
+  - functions

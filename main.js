@@ -70,8 +70,11 @@
         },
 
         formSubmitted: function(message, type){
+            // Reset form inputs
             this.form_email.value = "";
             this.form_message.value = "";
+
+            // Display form messatge
             this.prompt.setAttribute('data-hidden','false');
             this.prompt.innerHTML = message;
             this.prompt.classList.add(type);
