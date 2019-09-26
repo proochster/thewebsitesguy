@@ -18,7 +18,8 @@
 
 [data-hint]{
     position: relative;
-    // clear: both;
+    line-height: 1;
+    padding: $half-unit 0;
 
     // &:before{
     //     @include screen-smaller-than($large){
@@ -41,7 +42,9 @@
     &:after {
         content: attr(data-hint);
         padding: $half-unit $unit;
-        background-color: $primary;
+        margin: $unit $double-unit 0 0;
+        background-color: $accent;
+        border-left: 5px solid $secondary;
         border-radius: 0 10px 10px 10px;
         font-size: 16px;
         font-weight: lighter;
@@ -52,8 +55,6 @@
         @include screen-bigger-than($small){
             padding: $unit $double-unit;
             margin-top: $unit;
-            background-color: $accent;
-            border-left: 5px solid $secondary;
             max-width: 50%;
         }
         @include screen-bigger-than($large){
