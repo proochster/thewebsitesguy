@@ -16,6 +16,10 @@ Use `bundle exec jekyll serve` when running for the first time or after _config.
 
 Otherwise use `jekyll serve` or the short version `jekyll s`
 
+To run Jekyll in the development environment using different settings create a `_config_dev.yml` file and use this command when serving the site
+
+`jekyll serve --config  "_config_dev.yml"`
+
 # Firebase
 
 Initialize project `firebase init`
