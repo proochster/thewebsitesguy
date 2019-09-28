@@ -1,18 +1,20 @@
 ---
 ---
-{% include head.html %}
+{% include head.html layout="narrow" %}
 <div class="top">
     <div class="wrapper">
         {% include header.html %}
-        <!-- {% include intro.html %} -->
+        {% include page-intro.html %}
     </div>
 </div>
 <div class="wrapper">
-    <div class="content">
-        <main class="main">
+    <div class="content m:flex">
+        <main class="main m:60 p-r-d">
             {{ content }}
         </main>
+        <aside class="m:40">
+            {% include contact.html %}
+        </aside>
     </div>
-    <!-- {% include contact.html %} -->
 </div>
 {% include footer.html %}

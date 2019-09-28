@@ -27,6 +27,9 @@ body{
     }
     &-b{
        padding-bottom: $unit;
+       &-d{
+           padding-bottom: $double-unit;
+       }
     }
     &-r{
         &-d{
@@ -43,6 +46,11 @@ body{
     max-width: $site-width;
     margin: 0 auto;
     box-sizing: border-box;
+    position: relative;
+
+    .narrow &{
+        max-width: $medium;
+    }
 }
 
 .m\:{

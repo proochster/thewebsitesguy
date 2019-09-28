@@ -5,5 +5,11 @@
         <loc>{{ site.url }}</loc>
         <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
         <priority>1.00</priority>
-    </url>
+    </url>{% for page in site.pages %}{% if page.priority %}
+    <url>
+        <loc>{{ site.url }}{{ page.url }}</loc>
+        <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+        <priority>{{ page.priority }}</priority>
+    </url>{% endif %}{% endfor %}
 </urlset>
+
