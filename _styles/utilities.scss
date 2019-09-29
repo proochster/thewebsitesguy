@@ -39,6 +39,12 @@
     top: 0;
 }
 
+// .a-{
+//     &r{
+//         text-align: right;
+//     }
+// }
+
 .glow:target{
     outline: 3px solid transparent;
     animation-name: glow;
