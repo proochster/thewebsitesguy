@@ -1,18 +1,12 @@
         <footer>
-            <div class="wrapper m:flex">
-                <div class="m-50 l-25 p-b p-r-d">
-                     <a title="Introduction to responsive web design" href="{{ site.url }}/responsive-web-design" class="secondary block">Responsive web design</a>
-                </div>    
-                <!-- <div>
-                    column
+            <div class="wrapper m:flex">            
+                <div class="m-50 l-25 p-b p-r-d">{% for page in site.pages %}{% if page.title %}
+                    <a title="{{ page.title }}" href="{{ site.url }}{{ page.url }}" class="secondary block">{{ page.title }}</a>{% endif %}{% endfor %}
                 </div>
-                <div class="m-50 l-25 p-b">
-                   column
-                </div> -->
             </div>
             <div class="wrapper">
                 <a href="{{ site.url }}" title="TheWebsitesGuy homepage" class="p-r-d block">{{ site.title }}</a>
-                Last updated: <span class="italic">{{ site.time | date_to_long_string }}</span>
+                Last updated on <span class="italic">{{ site.time | date_to_long_string }}</span>
             </div>
         </footer>
         <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
