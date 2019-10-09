@@ -10,7 +10,7 @@
                 var t = performance.timing;
                 var p = t.domInteractive - t.navigationStart;
 
-                if (p < 2000){
+                if (p < 2000 && p > 0 ){
                     var message = "This site has loaded in only " + (p/1000).toFixed(2) + " second!";
                     self.hints.item(0).setAttribute('data-hint', message);
                 }                
