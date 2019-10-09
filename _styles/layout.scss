@@ -11,7 +11,8 @@ body{
 }
 
 .top{
-    background-image: linear-gradient(to bottom, $primary-light, $primary);
+    // background-image: linear-gradient(to bottom, $primary-light, $primary);
+    background-image: radial-gradient(circle at bottom, #00a3ff, #003087 90%);
 }
 
 .m{
