@@ -1,0 +1,19 @@
+/*------------------------------------*\
+    #INLINE LIST
+\*------------------------------------*/
+
+.inline-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    &__item{
+        display: inline-block;
+    }
+
+    &__link{
+        color: $link;
+        display: block;
+        white-space: nowrap;
+    }
+}

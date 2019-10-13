@@ -8,6 +8,7 @@
     </div>
 </div>
 <div class="wrapper">
+    {% include breadcrumbs.html %}
     <div class="content m:flex">
         <main class="main m:60 p-r-d">
             {% if page.date %}<span class="block"><span class="accent">|</span> <small class="italic">Updated on {{ page.date | date_to_long_string }}</small></span>{% endif %}
