@@ -30,3 +30,4 @@ exclude:
   - firebase.json
   - package.json
   - functions
+  - blog.html
