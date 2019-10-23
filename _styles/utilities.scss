@@ -22,6 +22,35 @@
     color: $link;
 }
 
+.text-button{
+    color: $link;
+    border: 1px solid $grey-light;
+    border-radius: $unit;
+    padding: 0 $unit;
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover{
+        background-color: $primary-light;
+        color: $light;
+        border-color: $primary-light;
+    }
+}
+
+.button{
+    width: 100%;
+    max-width: 50%;
+    background-color: $link;
+    color: $light;
+    border: none;
+    border-radius: $half-unit;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $primary-light;
+    }
+}
+
 .uppercase{
     text-transform: uppercase;
 }
