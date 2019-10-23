@@ -1,0 +1,14 @@
+/*------------------------------------*\
+    #SERVICES
+\*------------------------------------*/
+
+.service{
+    h2 {
+        border-bottom: 1px solid $grey-light;
+        padding-bottom: $unit;
+        margin: 0;
+    }
+    p {
+        margin: $unit 0;
+    }
+}
