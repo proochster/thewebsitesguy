@@ -23,27 +23,25 @@
 }
 
 .text-button{
-    color: $link;
-    border: 1px solid $grey-light;
-    border-radius: $unit;
+    color: $light;
+    border-radius: $double-unit;
+    background-color: $primary-light;
     padding: 0 $unit;
     display: inline-block;
     text-decoration: none;
 
     &:hover{
-        background-color: $primary-light;
-        color: $light;
-        border-color: $primary-light;
+        background-color: $secondary;
     }
 }
 
 .button{
     width: 100%;
-    max-width: 50%;
-    background-color: $link;
+    background-color: $secondary;
+    padding: $half-unit;
     color: $light;
     border: none;
-    border-radius: $half-unit;
+    border-radius: 20px;
     cursor: pointer;
 
     &:hover{

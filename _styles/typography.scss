@@ -14,8 +14,16 @@ h1,h2,h3,h4,h5{
     line-height: 1.2;
 }
 
+.large{
+    font-size: 36px;
+
+    @include screen-bigger-than($small){
+        font-size: 48px;
+    }
+}
+
 a{
-    color: $light;
+    color: $link;
 
     &:hover{
         text-decoration: none;
