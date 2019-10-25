@@ -5,7 +5,7 @@ description: TheWebsitesGuy.co.uk performance, speed and optimization
 url: "https://thewebsitesguy.co.uk"
 twitter_username: thewebsitesguy
 github_username:  proochster
-theme-colour: '#054D76'
+theme-colour: '#ff5050'
 
 # Build settings
 markdown: kramdown

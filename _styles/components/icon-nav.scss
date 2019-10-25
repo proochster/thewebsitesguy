@@ -6,17 +6,16 @@
     padding: 0;
     margin: 0;
     list-style: none;
-    line-height: 25px;
 
     &__item{
         display: inline-block;
     }
 
     &__link{
-        color: $dark;
-        padding: $half-unit;
+        color: $secondary;
+        padding: $unit;
         display: block;
         width: 18px;
-        margin-right: 36px;
+        height: 18px;
     }
 }
