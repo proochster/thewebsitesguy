@@ -13,11 +13,14 @@
     }
 
     &__logo{
-        font-size: 18px;
-        line-height: 40px;
+        line-height: 1;
 
         a{
             text-decoration: none;
+        }
+
+        svg {
+            height: 60px;
         }
     }
 }
