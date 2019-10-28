@@ -2,8 +2,7 @@
     #INTRO
 \*------------------------------------*/
 
-.intro{
-    text-shadow: 3px 3px 0 $light;    
+.intro{ 
 
     &__title{
         font-size: 42px;
@@ -24,9 +23,8 @@
         content: attr(data-hint);
         padding: $unit;
         margin: $unit $double-unit 0 0;
-        color: $dark;
-        background: $light;
-        border-left: 3px solid $grey-mid;
+        color: $light;
+        border: 1px solid $light;
         border-radius: 0 20px 20px 20px;
         font-size: 16px;
         display: block;
