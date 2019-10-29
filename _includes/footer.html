@@ -1,12 +1,13 @@
         <footer>
-            <div class="wrapper m:flex">            
+            <div class="wrapper m:flex">
+                <div class="m-50 l-25 p-b p-r-d">
+                    <a href="{{ site.url }}" class="light block" title="{{ site.titleurl }}">{% include /svg/thewebsitesguy.svg %}</a>
+                    <a href="{{ site.url }}" title="TheWebsitesGuy homepage" class="p-r-d block light p-t p-b">{{ site.titleurl }}</a>
+                    Last updated on <span class="italic">{{ site.time | date_to_long_string }}</span>
+                </div>            
                 <div class="m-50 l-25 p-b p-r-d">{% for page in site.pages %}{% if page.title %}
                     <a title="{{ page.title }}" href="{{ site.url }}{{ page.url }}" class="block light p-t">{{ page.title }}</a>{% endif %}{% endfor %}
                 </div>
-            </div>
-            <div class="wrapper">
-                <a href="{{ site.url }}" title="TheWebsitesGuy homepage" class="p-r-d block light p-t p-b">{{ site.title }}</a>
-                Last updated on <span class="italic">{{ site.time | date_to_long_string }}</span>
             </div>
         </footer>
         <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
