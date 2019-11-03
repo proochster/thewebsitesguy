@@ -22,21 +22,27 @@
     color: $link;
 }
 
+.bg-light{
+    background-color: $secondary-light;
+}
+
 .text-button{
-    color: $light;
+    color: $primary;
+    border: 1px solid;
     border-radius: $double-unit;
-    background-color: $primary-light;
-    padding: 0 $unit;
+    padding: $half-unit $unit;
     display: inline-block;
     text-decoration: none;
 
+
     &:hover{
         background-color: $secondary;
+        color: $light;
+        border-color: $secondary;
     }
 }
 
 .button{
-    width: 100%;
     background-color: $secondary;
     padding: $half-unit;
     color: $light;
@@ -46,7 +52,7 @@
     cursor: pointer;
 
     &:hover{
-        background-color: $primary-light;
+        background-color: $primary-alt;
     }
 }
 
@@ -62,10 +68,10 @@
     display: block;
 }
 
-.sticky{
-    position: sticky;
-    top: 0;
-}
+// .sticky{
+//     position: sticky;
+//     top: 0;
+// }
 
 // .a-{
 //     &r{

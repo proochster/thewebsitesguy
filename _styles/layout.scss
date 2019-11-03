@@ -56,13 +56,22 @@ body{
     }
 }
 
+.s\:{
+    @include screen-smaller-than($small){
+        &100{
+            width: 100%;
+        }
+    }
+}
+
 .m\:{
     @include screen-bigger-than($small){
-        &40{
-            width: 40%;
-        }
+        // &40{
+        //     width: 40%;
+        // }
         &50{
-            width: 50%;
+            width: 48%;
+            margin: 1%;
         }
         &60{
             width: 60%;
@@ -82,11 +91,12 @@ body{
 .l\:{
     @include screen-bigger-than($medium){
         &25{
-            width: 25%;
+            width: 23%;
+            margin: 1%;
         }
-        &50{
-            width: 50%;
-        }
+        // &50{
+        //     width: 50%;
+        // }
 
         &flex{
             display: flex;

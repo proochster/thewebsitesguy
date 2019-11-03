@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    #CARD
+\*------------------------------------*/
+
+.card{
+    padding: 40px;
+    border-radius: $unit;
+    box-shadow: 0px 4px 10px $grey-mid;
+    background-image: linear-gradient(to bottom, $light, $secondary-light, $primary-light);
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        border-bottom: 1px solid $grey-light;
+        padding-bottom: $unit;
+        margin: 0;
+    }
+    p {
+        margin: $unit 0;
+        flex-grow: 1;
+    }
+    a{
+        text-align: center;
+    }
+}
