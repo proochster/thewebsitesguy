@@ -8,13 +8,13 @@
     </div>
 </div>
 <div class="wrapper">
-    <div class="content m:flex">
-        <main class="main m:60">
+    <div class="content">
+        <main class="main">
             {{ content }}
         </main>
-        <aside class="m:40">
-            {% include contact.html %}
-        </aside>
     </div>
+</div>
+<div>
+    {% include contact.html %}
 </div>
 {% include footer.html %}
