@@ -80,7 +80,8 @@
 // }
 
 .glow:target{
-    outline: 3px solid transparent;
+    background-color: transparent;
+    border-radius: $unit;
     animation-name: glow;
     animation-duration: 2s;
     animation-iteration-count: 1;
@@ -89,10 +90,10 @@
 @keyframes glow {
     // from {outline: 3px solid $link;}
     // to {outline: 3px solid transparent;}
-    0%   {outline-color: transparent;}
-    25%  {outline-color: transparent;}
-    50%  {outline-color: $link;}
-    100%  {outline-color: transparent;}
+    0%   {background-color: transparent;}
+    25%  {background-color: transparent;}
+    50%  {background-color: $confirm;}
+    100%  {background-color: transparent;}
 }
 
 [data-loaded]:after{
