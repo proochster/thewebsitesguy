@@ -9,17 +9,36 @@
     background-image: linear-gradient(to bottom, $light, $secondary-light, $primary-light);
     display: flex;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    &:before{
+        content: attr(data-card);
+        position: absolute;
+        color: $light;
+        font-size: 182px;
+        left: 30%;
+        z-index: 1;
+        line-height: 1;
+        bottom: 100px;
+        transform: rotate(-90deg);
+        width: 100%;
+    }
 
     h2 {
         border-bottom: 1px solid $grey-light;
         padding-bottom: $unit;
         margin: 0;
+        z-index: 2;
+        // text-shadow: -1px -1px 0px #FFF;
     }
     p {
         margin: $unit 0;
         flex-grow: 1;
+        z-index: 2;
     }
-    a{
+    a {
         text-align: center;
+        z-index: 2;
     }
 }
