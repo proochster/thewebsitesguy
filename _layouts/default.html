@@ -5,10 +5,10 @@
 <div class="top">
     <div class="wrapper">
         {% include page-intro.html %}
+        {% include breadcrumbs.html %}
     </div>
 </div>
 <div class="wrapper">
-    {% include breadcrumbs.html %}
     <div class="content m:60">
         <main class="main">
             {% if page.date %}<small class="italic">Updated on {{ page.date | date_to_long_string }}</small></span>{% endif %}
