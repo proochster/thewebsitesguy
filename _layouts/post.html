@@ -4,15 +4,19 @@
 {% include header.html %}
 <div class="top">
     <div class="wrapper">
-        {% include page-intro.html %}
         {% include breadcrumbs-blog.html %}
+        {% include page-intro.html %}
     </div>
 </div>
-<div class="wrapper">
-    <div class="content m:60">
+<div class="wrapper m:flex">
+    <div class="content m:60 p-r-d">
         <main class="main">
+            <div class="italic p-b">Posted on {{ page.date | date_to_long_string }}</div>
             {{ content }}
         </main>
     </div>
+    <aside class="m:40">
+        {% include latest-posts.html %}
+    </aside>
 </div>
 {% include footer.html %}

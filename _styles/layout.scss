@@ -15,6 +15,9 @@ body{
 }
 
 .m{
+    &-0{
+        margin: 0;
+    }
     &-t{
         margin-top: $unit;
     }
@@ -66,9 +69,9 @@ body{
 
 .m\:{
     @include screen-bigger-than($small){
-        // &40{
-        //     width: 40%;
-        // }
+        &40{
+            width: 40%;
+        }
         &50{
             width: 48%;
             margin: 1%;

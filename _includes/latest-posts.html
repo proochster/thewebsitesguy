@@ -1,0 +1,7 @@
+<h3 class="border-b p-b m-0 m-b">Latest posts</h3>
+{% for post in site.posts %}
+<div class="m-b p-b ">
+    <a href="{{ post.url }}" title="{{ post.title }}"><h4 class="m-0">{{ post.title }}</h4></a>
+    <small class="italic">{{ post.date | date_to_long_string }}</small>
+</div>
+{% endfor %}
