@@ -9,13 +9,13 @@
     </div>
 </div>
 <div class="wrapper m:flex">
-    <div class="content m:60 m:p-r-d p-b-d">
+    <div class="content m:70 m:p-r-d p-b-d">
         <main class="main">
             <div class="italic p-b">Posted on {{ page.date | date_to_long_string }}</div>
             {{ content }}
         </main>
     </div>
-    <aside class="m:40">
+    <aside class="m:30">
         {% include latest-posts.html %}
     </aside>
 </div>
