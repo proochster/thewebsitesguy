@@ -11,5 +11,15 @@
         <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
         <priority>{{ page.priority }}</priority>
     </url>{% endif %}{% endfor %}
+    <url>
+        <loc>{{ site.url }}/blog</loc>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <priority>0.80</priority>
+    </url>{% for post in site.posts %}
+    <url>
+        <loc>{{ site.url }}{{ post.url }}</loc>
+        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+        <priority>0.64</priority>
+    </url>{% endfor %}
 </urlset>
 
