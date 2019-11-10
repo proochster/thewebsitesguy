@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 .card{
-    padding: 40px;
+    padding: 32px;
     border-radius: $unit;
     box-shadow: 0px 4px 10px $grey-mid;
     background-image: linear-gradient(to bottom, $secondary-light, $secondary-light, $primary-light);
@@ -12,18 +12,18 @@
     position: relative;
     overflow: hidden;
 
-    &:before{
-        content: attr(data-card);
-        position: absolute;
-        color: $light;
-        font-size: 182px;
-        left: 30%;
-        z-index: 1;
-        line-height: 1;
-        bottom: 100px;
-        transform: rotate(-90deg);
-        width: 100%;
-    }
+    // &:before{
+    //     content: attr(data-card);
+    //     position: absolute;
+    //     color: $light;
+    //     font-size: 182px;
+    //     left: 30%;
+    //     z-index: 1;
+    //     line-height: 1;
+    //     bottom: 100px;
+    //     transform: rotate(-90deg);
+    //     width: 100%;
+    // }
 
     h2 {
         border-bottom: 1px solid $grey-light;
