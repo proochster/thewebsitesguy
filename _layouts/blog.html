@@ -1,18 +1,25 @@
 ---
 ---
-{% include head.html %}
+{% include head.html layout="narrow" %}
+{% include header.html %}
 <div class="top">
     <div class="wrapper">
-        {% include header.html %}
-        <!-- {% include intro.html %} -->
+        {% include breadcrumbs.html %}
+        {% include page-intro.html %}
     </div>
 </div>
 <div class="wrapper">
-    <div class="content">
+    <div class="content m:60 p-b-d">
         <main class="main">
-            {{ content }}
+            {% for post in site.posts %}
+            <div class="m-b p-b border-b">
+                <a href="{{ post.url }}" title="{{ post.title }}"><h2 class="m-0">{{ post.title }}</h2></a>
+                <small class="italic">{{ post.date | date_to_long_string }}</small>
+                <p class="m-0">{{ post.excerpt }}</p>
+            </div>
+            {% endfor %}
         </main>
     </div>
-    <!-- {% include contact.html %} -->
 </div>
+{% include contact.html %}
 {% include footer.html %}

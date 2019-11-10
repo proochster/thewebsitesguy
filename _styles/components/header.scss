@@ -17,6 +17,9 @@
 
         a{
             text-decoration: none;
+            text-transform: lowercase;
+            font-size: $unit;
+            letter-spacing: 3px;
         }
     }
 }

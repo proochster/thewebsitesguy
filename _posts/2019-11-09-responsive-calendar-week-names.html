@@ -1,0 +1,146 @@
+---
+title: Responsive calendar week names
+layout: post
+tags: html css
+---
+The solution described below used a combination of media queries and data attributes.
+
+<h3>The problem</h3>
+
+<p>To present a full week calendar table to the users and make the most out of the available screen estate without duplicating elements.</p>
+
+<p>The HTML structure, using a simple table, is perfectly fine to use on larger screens, however, on mobile devices it can result in content scrolling out side of the visible part of the screen or breaking to multiple lines. Not ideal if you consider the growing number of mobile users out there.</p>
+
+<em class="p-t block">Basic calendar html structure:</em>
+{% highlight html %}
+<table border="1">
+    <tr>
+        <td>Monday</td>
+        <td>Tuesday</td>
+        <td>Wednesday</td>
+        <td>Thursday</td>
+        <td>Friday</td>
+        <td>Saturday</td>
+        <td>Sunday</td>
+    </tr>
+</table>
+{% endhighlight %}
+
+<em class="p-t block">Output:</em>
+<div class="scroll-x">
+    <table border="1">
+        <tr>
+            <td>Monday</td>
+            <td>Tuesday</td>
+            <td>Wednesday</td>
+            <td>Thursday</td>
+            <td>Friday</td>
+            <td>Saturday</td>
+            <td>Sunday</td>
+        </tr>
+    </table>
+</div>
+
+<h3>The solution</h3>
+
+<p>Using media queries you can detect device screen size and serve a better aligned view.</p>
+
+<em class="p-t block">Try this instead:</em>
+{% highlight html %}
+<ul class="calendar-view__labels">
+    <li class="calendar-view__label" data-abbr="Mon">Monday</li>
+    <li class="calendar-view__label" data-abbr="Tue">Tuesday</li>
+    <li class="calendar-view__label" data-abbr="Wed">Wednesday</li>
+    <li class="calendar-view__label" data-abbr="Thu">Thursday</li>
+    <li class="calendar-view__label" data-abbr="Fri">Friday</li>
+    <li class="calendar-view__label" data-abbr="Sat">Saturday</li>
+    <li class="calendar-view__label" data-abbr="Sun">Sunday</li>
+</ul>
+{% endhighlight %}
+
+<p>First, swap <code>table</code> for an unordered list <code>ul</code>. This will give us more flexibility when it comes to the width of the elements. Add data attributes containing the abbreviated week day name <code>data-abbr="Mon"</code>. They contain mobile specific values. Notice that the screen readers can still take an advantage of the full week name.</p>
+
+<p>Then, add some styles to put it all to work. The key style in this approach is the <code>content: attr(data-abbr)</code> applied to the sudo <code>:after</code> element. It lets you grab the value of the data attribute and pass it to the <code>content</code> property.</p>
+
+{%- highlight css -%}
+.calendar-view__labels {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.calendar-view__label {
+    position: relative;
+}
+@media screen and (max-width: 640px) {
+    .calendar-view__label {
+        visibility: hidden;
+        width: calc(100% / 7);
+    }
+}
+.calendar-view__label:after {
+    content: attr(data-abbr);
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: Beige;
+}
+@media screen and (max-width: 640px) {
+    .calendar-view__label:after {
+        display: block;
+        visibility: visible;
+    }
+}
+{%- endhighlight -%}
+
+<style>
+.calendar-view__labels {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.calendar-view__label {
+    position: relative;
+}
+@media screen and (max-width: 640px) {
+    .calendar-view__label {
+        visibility: hidden;
+        width: calc(100% / 7);
+    }
+}
+.calendar-view__label:after {
+  content: attr(data-abbr);
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: Beige;
+}
+@media screen and (max-width: 640px) {
+  .calendar-view__label:after {
+    display: block;
+    visibility: visible;
+  }
+}
+</style>
+
+<h3>The outcome</h3>
+
+<p>There you go. Try resizing the screen or use different devices to preview the solution. This approach can be applied in other situations of course so feel free to modify it to your requirements.</p>
+
+<ul class="calendar-view__labels bg-light">
+    <li class="calendar-view__label" data-abbr="Mon">Monday</li>
+    <li class="calendar-view__label" data-abbr="Tue">Tuesday</li>
+    <li class="calendar-view__label" data-abbr="Wed">Wednesday</li>
+    <li class="calendar-view__label" data-abbr="Thu">Thursday</li>
+    <li class="calendar-view__label" data-abbr="Fri">Friday</li>
+    <li class="calendar-view__label" data-abbr="Sat">Saturday</li>
+    <li class="calendar-view__label" data-abbr="Sun">Sunday</li>
+</ul>
+

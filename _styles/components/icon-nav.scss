@@ -2,7 +2,7 @@
     #ICON NAV
 \*------------------------------------*/
 
-.icon-nav{
+.nav{
     padding: 0;
     margin: 0;
     list-style: none;
@@ -12,11 +12,24 @@
         display: inline-block;
     }
 
+    &__text{
+        border-radius: $double-unit;
+        padding: $half-unit $unit;
+        color: $light;
+        display: inline;
+        border: 1px solid;
+        text-decoration: none;
+    }
+
     &__link{
         color: $secondary;
         padding: $unit;
-        display: block;
-        width: 18px;
-        height: 18px;
+        text-decoration: none;
+        
+        svg{
+            width: 18px;
+            height: 18px;
+            margin: 0 0 -4px;
+        }
     }
 }

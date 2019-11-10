@@ -2,8 +2,13 @@
     #BREADCRUMBS
 \*------------------------------------*/
 
-.breadcrumbs{
-    [typeof="WebPage"]:after{
-        content: "\00BB";
-    }   
+// .breadcrumbs{
+//     [typeof="WebPage"]:after{
+//         content: "\00BB";
+//     }   
+// }
+
+.separator{
+    font-size: $unit;
+    padding: 0 $half-unit;
 }
