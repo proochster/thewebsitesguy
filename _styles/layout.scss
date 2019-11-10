@@ -37,13 +37,25 @@ body{
            padding-bottom: $double-unit;
        }
     }
-    &-r{
-        &-d{
-            padding-right: $double-unit;
-        }
-    }
+    // &-r{
+    //     &-d{
+    //         padding-right: $double-unit;
+    //     }
+    // }
     &-t{
         padding-top: $unit;
+    }
+}
+
+@include screen-bigger-than($small){
+.m\:{
+        &p{
+            &-r{
+                &-d{
+                    padding-right: $double-unit;
+                }
+            }
+        }
     }
 }
 

@@ -43,6 +43,7 @@
 }
 
 .button{
+    font-family: Georgia, serif;
     background-color: $secondary;
     padding: $half-unit;
     color: $light;
@@ -74,10 +75,10 @@
     }
 }
 
-// .sticky{
-//     position: sticky;
-//     top: 0;
-// }
+.sticky{
+    position: sticky;
+    top: 0;
+}
 
 // .a-{
 //     &r{
@@ -120,4 +121,8 @@
 
 [data-hidden="false"]{
     display: block;
+}
+
+.scroll-x{
+    overflow-x: scroll;
 }
