@@ -8,6 +8,11 @@ twitter_username: thewebsitesguy
 github_username:  proochster
 theme-colour: '#ff5050'
 
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title
+
 # Build settings
 markdown: kramdown
 # theme: minima
