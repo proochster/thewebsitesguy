@@ -3,9 +3,9 @@ title: Responsive calendar week names
 layout: post
 tags: html css
 ---
-The solution described below used a combination of media queries and data attributes.
+The solution described below uses a combination of media queries, data attributes and pseudo elements.
 
-<h3>The problem</h3>
+<h3>The challange</h3>
 
 <p>To present a full week calendar table to the users and make the most out of the available screen estate without duplicating elements.</p>
 
@@ -26,7 +26,7 @@ The solution described below used a combination of media queries and data attrib
 </table>
 {% endhighlight %}
 
-<em class="p-t block">Output:</em>
+<em class="p-t block">This can be improved:</em>
 <div class="scroll-x">
     <table border="1">
         <tr>
@@ -41,7 +41,7 @@ The solution described below used a combination of media queries and data attrib
     </table>
 </div>
 
-<h3>The solution</h3>
+<h3>A better approach for responsive content</h3>
 
 <p>Using media queries you can detect device screen size and serve a better aligned view.</p>
 
@@ -58,7 +58,7 @@ The solution described below used a combination of media queries and data attrib
 </ul>
 {% endhighlight %}
 
-<p>First, swap <code>table</code> for an unordered list <code>ul</code>. This will give us more flexibility when it comes to the width of the elements. Add data attributes containing the abbreviated week day name <code>data-abbr="Mon"</code>. They contain mobile specific values. Notice that the screen readers can still take an advantage of the full week name.</p>
+<p>First, swap <code>table</code> for an unordered list <code>ul</code>. This will give us more flexibility when it comes to the width of the elements. Add the data attributes containing the abbreviated week day name <code>data-abbr="Mon"</code>. They contain mobile specific values. Notice that the screen readers can still take an advantage of the full week name displayed in the list item tag.</p>
 
 <p>Then, add some styles to put it all to work. The key style in this approach is the <code>content: attr(data-abbr)</code> applied to the sudo <code>:after</code> element. It lets you grab the value of the data attribute and pass it to the <code>content</code> property.</p>
 
@@ -130,9 +130,9 @@ The solution described below used a combination of media queries and data attrib
 }
 </style>
 
-<h3>The outcome</h3>
+<h3>The new responsive approach</h3>
 
-<p>There you go. Try resizing the screen or use different devices to preview the solution. This approach can be applied in other situations of course so feel free to modify it to your requirements.</p>
+<p>There you go. Try resizing the screen or use different devices to preview the solution. Of course, this approach can be applied in other situations, so feel free to experimant and modify it to your requirements.</p>
 
 <ul class="calendar-view__labels bg-light">
     <li class="calendar-view__label" data-abbr="Mon">Monday</li>
