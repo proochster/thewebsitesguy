@@ -37,6 +37,9 @@ body{
            padding-bottom: $double-unit;
        }
     }
+    &-r{
+        padding-right: $unit;
+    }
     // &-r{
     //     &-d{
     //         padding-right: $double-unit;
@@ -71,9 +74,21 @@ body{
     }
 }
 
+// .flex{
+//     display: flex;
+// }
+
+// .w20{
+//     width: 20%;
+// }
+
+// .w80{
+//     width: 80%;
+// }
+
 .s\:{
     @include screen-smaller-than($small){
-        &100{
+        &w100{
             width: 100%;
         }
     }
@@ -81,20 +96,20 @@ body{
 
 .m\:{
     @include screen-bigger-than($small){
-        &30{
+        &w30{
             width: 30%;
         }
-        &40{
+        &w40{
             width: 40%;
         }
-        &50{
+        &w50{
             width: 48%;
             margin: 1%;
         }
-        &60{
+        &w60{
             width: 60%;
         }
-        &70{
+        &w70{
             width: 70%;
         }
 
@@ -111,17 +126,16 @@ body{
 
 .l\:{
     @include screen-bigger-than($medium){
-        &25{
+        &w25{
             width: 23%;
             margin: 1%;
         }
-        &33{
+        &w33{
             width: 31%;
             margin: 1%;
         }
 
         &flex{
-            display: flex;
             flex-flow: wrap;
             
             > * {

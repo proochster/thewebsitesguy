@@ -9,11 +9,14 @@
     </div>
 </div>
 <div class="wrapper">
-    <div class="content m:70 p-b-d">
+    <div class="content m:w70 p-b-d">
         <main class="main">
             {% for post in site.posts %}
             <div class="m-b p-b border-b">
                 <a href="{{ post.url }}" title="{{ post.title }}"><h2 class="m-0">{{ post.title }}</h2></a>
+                {% if post.tags.size > 0 %}<ul class="block inline-list">
+                    {% for tag in post.tags %}<li class="inline-list__item p-r">#{{ tag }}</li>{% endfor %}
+                </ul>{% endif %}
                 <small class="italic">{{ post.date | date_to_long_string }}</small>
                 <p class="m-0">{{ post.excerpt }}</p>
             </div>
