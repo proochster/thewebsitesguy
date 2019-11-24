@@ -37,6 +37,9 @@ body{
            padding-bottom: $double-unit;
        }
     }
+    &-r{
+        padding-right: $unit;
+    }
     // &-r{
     //     &-d{
     //         padding-right: $double-unit;
