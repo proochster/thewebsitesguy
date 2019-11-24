@@ -1,3 +1,6 @@
 <div class="intro">
-    <h1 class="block secondary large m:wt-l">{{ page.title }}</h1>
+    <h1 class="block secondary large m:wt-l m-0">{{ page.title }}</h1>
+    {% if page.tags.size > 0 %}<ul class="block inline-list light">
+        {% for tag in page.tags %}<li class="inline-list__item p-r">#{{ tag }}</li>{% endfor %}
+    </ul>{% endif %}
 </div>

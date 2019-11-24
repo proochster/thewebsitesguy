@@ -1,0 +1,121 @@
+---
+title: Scroll snap
+layout: post
+tags: html css
+---
+Scroll snap is a CSS property letting you set the behaviour of the overflowing scrolling items.
+
+<h3>Why use scroll snap functionality?</h3>
+<p>Scroll snap feature allows for displaying a scrolling piece of content in the optimal position. It's a common approach, especially on mobile devices and tablets, to display only a portion of the content and let the rest of it overflow out of the view. It's up to the user then to scroll the hidden items into the view.</p>
+
+<em class="p-t block">The default overflowing content with no scroll snapping.</em>
+<style>
+    .scroll-x{
+        overflow-x: auto;
+        max-height: 320px;
+        max-width: 320px;
+    }
+    .scroll-x__wrapper{
+        display: flex;
+    }
+</style>
+<div class="scroll-x">
+    <div class="scroll-x__wrapper">
+        <img src="https://picsum.photos/id/480/300/300" alt="image 1">
+        <img src="https://picsum.photos/id/480/300/300" alt="image 2">
+        <img src="https://picsum.photos/id/480/300/300" alt="image 3">
+        <img src="https://picsum.photos/id/480/300/300" alt="image 4">
+        <img src="https://picsum.photos/id/480/300/300" alt="image 5">
+    </div>
+</div>
+
+<em class="p-t block">HTML structure:</em>
+{% highlight html %}
+<div class="scroll-x">
+    <div class="scroll-x__wrapper">
+        <img src="https://picsum.photos/id/480/300/300" alt="image 1">
+        <img src="https://picsum.photos/id/480/300/300" alt="image 2">
+        <img src="https://picsum.photos/id/480/300/300" alt="image 3">
+        <img src="https://picsum.photos/id/480/300/300" alt="image 4">
+        <img src="https://picsum.photos/id/480/300/300" alt="image 5">
+    </div>
+</div>
+{% endhighlight %}
+
+<p>But we can take away the fiddly work from the user by adding the new behaviour rules.</p>
+
+<em class="p-t block">Horisontal scroll snap CSS:</em>
+{% highlight css %}
+    .scroll-snap-x{
+        overflow-x: auto;
+        scroll-snap-type:x mandatory; /* mandatory|proximity */
+        max-height: 320px;
+        max-width: 320px;
+    }
+
+    .scroll-snap-x__wrapper{
+        display: flex;
+    }
+
+    .scroll-snap-x img{
+        scroll-snap-align: center; /* center|start|end */
+    }
+{% endhighlight %}
+
+<style>
+    .scroll-snap-x{
+        overflow-x: auto;
+        scroll-snap-type:x mandatory; /* mandatory|proximity */
+        max-height: 320px;
+        max-width: 320px;
+    }
+
+    .scroll-snap-x__wrapper{
+        display: flex;
+    }
+
+    .scroll-snap-x img{
+        scroll-snap-align: center; /* center|start|end */
+    }
+</style>
+<em class="p-t block">Now that's much better:</em>
+<div class="scroll-snap-x">
+    <div class="scroll-snap-x__wrapper">
+        <img src="https://picsum.photos/id/480/300/300" alt="image 1">
+        <img src="https://picsum.photos/id/480/300/300" alt="image 2">
+        <img src="https://picsum.photos/id/480/300/300" alt="image 3">
+        <img src="https://picsum.photos/id/480/300/300" alt="image 4">
+        <img src="https://picsum.photos/id/480/300/300" alt="image 5">
+    </div>
+</div>
+
+<h3>How about vertical scroll snap?</h3>
+
+Yes, scroll snap also supports Y axis. Just flip the x's for y's and you should be good to go.
+
+<style>
+    .scroll-snap-y{
+        overflow-y: auto;
+        scroll-snap-type:y mandatory; /* mandatory|proximity */
+        max-height: 320px;
+        max-width: 320px;
+    }
+
+    .scroll-snap-y img{
+        scroll-snap-align: center; /* center|start|end */
+    }
+</style>
+<div class="scroll-snap-y">
+    <img src="https://picsum.photos/id/480/300/300" alt="image 1">
+    <img src="https://picsum.photos/id/480/300/300" alt="image 2">
+    <img src="https://picsum.photos/id/480/300/300" alt="image 3">
+    <img src="https://picsum.photos/id/480/300/300" alt="image 4">
+    <img src="https://picsum.photos/id/480/300/300" alt="image 5">
+</div>
+
+<h3>Scroll snap browser support.</h3>
+<p>The global support for this feature reaches 87% according to <a href="https://caniuse.com/#search=scroll-snap" title="Can I use - scroll snap" target="_blank">Can I Use</a> and can be accessed even by the IE 10 users if prefixed. That's pretty decent considering it's an enhancement to the scrolling functionality, so when the support is missing, users can still navigate through the content without noticing a difference.</p> 
+
+
+
+
