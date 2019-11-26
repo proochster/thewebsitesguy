@@ -9,7 +9,7 @@
                     <a title="{{ page.title }}" href="{{ site.url }}{{ page.url }}" class="block light p-t">{{ page.title }}</a>{% endunless %}{% endif %}{% endfor %}
                 </div>
                 <div class="p-b m:p-r-d">
-                    <a title="Blog" href="{{ site.url }}/blog" class="block light p-t">Blog</a>
+                    <a title="Blog" href="{{ site.url }}/blog.html" class="block light p-t">Blog</a>
                     {% for post in site.posts limit:5 %}
                     <a title="{{ post.title }}" href="{{ site.url }}{{ post.url }}" class="block light p-t">
                     &raquo; {{ post.title }}</a>{% endfor %}
