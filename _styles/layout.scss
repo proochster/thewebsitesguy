@@ -63,7 +63,7 @@ body{
 }
 
 .wrapper{
-    padding: $double-unit;
+    padding: 36px;
     max-width: $site-width;
     margin: 0 auto;
     box-sizing: border-box;
@@ -143,4 +143,8 @@ body{
             }
         }
     }
+}
+
+.align-center{
+    margin: 0 auto;
 }

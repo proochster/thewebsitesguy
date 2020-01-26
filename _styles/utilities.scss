@@ -26,13 +26,14 @@
     background-color: $secondary-light;
 }
 
-.bg-primary-light{
-    background-color: $primary-light;
-}
+// .bg-primary-light{
+//     background-color: $primary-light;
+// }
 
 .text-button{
-    color: $primary;
-    border: 1px solid;
+    color: $light;
+    background-color: $secondary;
+    // border: 1px solid;
     border-radius: $double-unit;
     padding: $half-unit $unit;
     display: inline-block;
@@ -40,9 +41,9 @@
 
 
     &:hover{
-        background-color: $secondary;
-        color: $light;
-        border-color: $secondary;
+        background-color: $primary;
+        // color: $light;
+        // border-color: $secondary;
     }
 }
 
@@ -61,9 +62,9 @@
     }
 }
 
-.uppercase{
-    text-transform: uppercase;
-}
+// .uppercase{
+//     text-transform: uppercase;
+// }
 
 .italic{
     font-style: italic;

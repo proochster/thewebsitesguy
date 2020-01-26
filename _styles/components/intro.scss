@@ -6,40 +6,51 @@
 
     &__title{
         font-size: 42px;
+        text-align: center;
 
         @include screen-bigger-than($small){
             font-size: 96px;
             line-height: 1;
         }
     }
+
+    &__sub{
+        color: $light;
+        font-family: Arial, sans-serif;
+        letter-spacing: 5px;
+        font-size: 20px;
+    }
 }
 
 [data-hint]{
     position: relative;
     line-height: 1;
-    padding: $half-unit 0;
+    padding: 0 0 14px;
+    display: block;
+    
+    @include screen-bigger-than($small){
+        border-bottom: 1px solid $accent;
+        display: inline;
+    }
 
     &:after {
-        content: attr(data-hint);
-        padding: $unit;
-        margin: $unit $double-unit 0 0;
+        background: $dark;
         color: $light;
-        border: 1px solid $light;
+        content: attr(data-hint);
+        padding: 0 12px;
         font-family: Arial, sans-serif;
-        border-radius: 0 20px 20px 20px;
         font-size: 16px;
-        display: block;
-        width: fit-content;
+        display: table;
+        letter-spacing: 3px;
+        margin: 12px auto 24px;
         
         @include screen-bigger-than($small){
-            padding: $unit $double-unit;
-            margin-top: $unit;
-            max-width: 50%;
+            margin: 12px auto 48px;
         }
-        @include screen-bigger-than($large){
-            display: inline-block;
-            border-radius: 20px 20px 20px 0;
-            position: absolute;
-        }
+        // @include screen-bigger-than($large){
+        //     display: inline-block;
+        //     border-radius: 20px 20px 20px 0;
+        //     position: absolute;
+        // }
     }
 }
