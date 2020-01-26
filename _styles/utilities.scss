@@ -26,16 +26,11 @@
     background-color: $secondary-light;
 }
 
-// .bg-primary-light{
-//     background-color: $primary-light;
-// }
-
 .text-button{
     color: $light;
     background-color: $secondary;
-    // border: 1px solid;
     border-radius: $double-unit;
-    padding: $half-unit $unit;
+    padding: $half-unit $double-unit;
     display: inline-block;
     text-decoration: none;
 
