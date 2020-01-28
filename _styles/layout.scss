@@ -12,6 +12,7 @@ body{
 
 .top{
     background-color: $dark;
+    background-image: radial-gradient(circle, $dark, $darker 115%);
 }
 
 .m{
