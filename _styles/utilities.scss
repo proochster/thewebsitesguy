@@ -28,7 +28,7 @@
 
 .text-button{
     color: $light;
-    background-color: $secondary;
+    background-color: $primary;
     border-radius: $double-unit;
     padding: $half-unit $double-unit;
     display: inline-block;
@@ -36,7 +36,7 @@
 
 
     &:hover{
-        background-color: $primary;
+        background-color: $secondary;
         // color: $light;
         // border-color: $secondary;
     }

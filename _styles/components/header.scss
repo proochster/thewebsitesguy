@@ -3,7 +3,6 @@
 \*------------------------------------*/
 
 .header{
-    background-color: $dark;
 
     @include screen-bigger-than($small){
         &__wrapper{
