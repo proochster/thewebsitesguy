@@ -5,11 +5,11 @@
                     <a href="{{ site.url }}" title="TheWebsitesGuy homepage" class="p-r-d block light p-t p-b">{{ site.titleurl }}</a>
                     Last updated on <span class="italic">{{ site.time | date_to_long_string }}</span>
                 </div>
-                <div class="p-b m:p-r-d">{% for page in site.pages %}{% if page.title %}{% unless page.title == 'Blog' %}
+                <div class="p-b m:p-r-d">{% for page in site.pages %}{% if page.title %}{% unless page.title == 'Codes' %}
                     <a title="{{ page.title }}" href="{{ site.url }}{{ page.url }}" class="block light p-t">{{ page.title }}</a>{% endunless %}{% endif %}{% endfor %}
                 </div>
                 <div class="p-b m:p-r-d">
-                    <a title="Blog" href="{{ site.url }}/blog.html" class="block light p-t">Blog</a>
+                    <a title="Codes" href="{{ site.url }}/codes.html" class="block light p-t">Codes</a>
                     {% for post in site.posts limit:5 %}
                     <a title="{{ post.title }}" href="{{ site.url }}{{ post.url }}" class="block light p-t">
                     &raquo; {{ post.title }}</a>{% endfor %}
