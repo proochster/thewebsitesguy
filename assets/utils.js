@@ -1,1 +1,3 @@
-console.log("Filtering initialized");
+/**
+ * Utility JavaScript functions for the website
+ */
