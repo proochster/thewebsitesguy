@@ -1,1 +1,1 @@
-console.log("Utils loaded");
+console.log("Filtering initialized");
