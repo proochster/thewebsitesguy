@@ -15,9 +15,6 @@
  */
 "use strict";
 
-// Import required modules
-import "./assets/utils.js";
-
 const functions = require("firebase-functions");
 const nodemailer = require("nodemailer");
 // Configure the email transport using the default SMTP transport and a GMail account.
